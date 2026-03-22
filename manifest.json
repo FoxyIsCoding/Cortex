@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Cortex",
   "version": "1.0",
-  "description": "Debloat my ass",
+  "description": "Debloats website content so you can save some of those braincells for later :3",
 
   "action": {
     "default_popup": "popup.html"
