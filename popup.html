@@ -35,35 +35,135 @@
 
       <div class="divider"></div>
 
+      <div class="dev-mode-section">
+        <div class="toggle-info">
+          <h3>Developer Mode</h3>
+          <p id="dev-mode-text">Select elements to hide</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="dev-mode-toggle">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <div class="dev-mode-actions" id="dev-mode-actions" style="display: none;">
+        <button class="dev-action-button" id="export-rules-btn">
+          <i class="material-icons">download</i>
+          <span>Export Rules</span>
+        </button>
+        <button class="dev-action-button" id="clear-rules-btn">
+          <i class="material-icons">clear_all</i>
+          <span>Clear Custom Rules</span>
+        </button>
+      </div>
+
+      <div class="divider"></div>
+
       <div class="info-section">
         <h3>Active Blocking Rules</h3>
-        <div class="rules-list">
-          <div class="rule-item">
-            <i class="material-icons rule-icon">block</i>
-            <div class="rule-info">
-              <span class="rule-site">YouTube</span>
-              <span class="rule-desc">Shorts, Reels, Recommendations</span>
-            </div>
-          </div>
-          <div class="rule-item">
-            <i class="material-icons rule-icon">block</i>
-            <div class="rule-info">
-              <span class="rule-site">Reddit</span>
-              <span class="rule-desc">Recommended posts, Ads</span>
-            </div>
-          </div>
-          <div class="rule-item">
-            <i class="material-icons rule-icon">block</i>
-            <div class="rule-info">
-              <span class="rule-site">X (Twitter)</span>
-              <span class="rule-desc">Sidebar, Trending topics</span>
-            </div>
-          </div>
+        <div class="rules-list" id="active-rules-list">
+          <!-- Dynamically populated -->
         </div>
         <p class="edit-note">
           <i class="material-icons">info</i>
           Edit blocking rules in <code>content.js</code>
         </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Settings Menu -->
+      <div class="settings-menu">
+        <button class="settings-trigger" id="settings-trigger">
+          <i class="material-icons">settings</i>
+          <span>Settings</span>
+          <i class="material-icons expand-icon">expand_more</i>
+        </button>
+        
+        <div class="settings-content" id="settings-content">
+          <div class="settings-section">
+            <h3>Appearance</h3>
+            
+            <div class="setting-item">
+              <div class="setting-label">
+                <span class="setting-title">Color Theme</span>
+                <span class="setting-description">Customize the extension's color scheme</span>
+              </div>
+            </div>
+            
+            <div class="theme-grid">
+              <button class="theme-card active" data-theme="purple">
+                <div class="theme-preview">
+                  <div class="theme-color theme-color-primary"></div>
+                  <div class="theme-color theme-color-secondary"></div>
+                  <div class="theme-color theme-color-tertiary"></div>
+                </div>
+                <div class="theme-name">Purple</div>
+                <i class="material-icons check-icon">check_circle</i>
+              </button>
+              
+              <button class="theme-card" data-theme="blue">
+                <div class="theme-preview">
+                  <div class="theme-color theme-color-primary"></div>
+                  <div class="theme-color theme-color-secondary"></div>
+                  <div class="theme-color theme-color-tertiary"></div>
+                </div>
+                <div class="theme-name">Blue</div>
+                <i class="material-icons check-icon">check_circle</i>
+              </button>
+              
+              <button class="theme-card" data-theme="green">
+                <div class="theme-preview">
+                  <div class="theme-color theme-color-primary"></div>
+                  <div class="theme-color theme-color-secondary"></div>
+                  <div class="theme-color theme-color-tertiary"></div>
+                </div>
+                <div class="theme-name">Green</div>
+                <i class="material-icons check-icon">check_circle</i>
+              </button>
+              
+              <button class="theme-card" data-theme="red">
+                <div class="theme-preview">
+                  <div class="theme-color theme-color-primary"></div>
+                  <div class="theme-color theme-color-secondary"></div>
+                  <div class="theme-color theme-color-tertiary"></div>
+                </div>
+                <div class="theme-name">Red</div>
+                <i class="material-icons check-icon">check_circle</i>
+              </button>
+              
+              <button class="theme-card" data-theme="orange">
+                <div class="theme-preview">
+                  <div class="theme-color theme-color-primary"></div>
+                  <div class="theme-color theme-color-secondary"></div>
+                  <div class="theme-color theme-color-tertiary"></div>
+                </div>
+                <div class="theme-name">Orange</div>
+                <i class="material-icons check-icon">check_circle</i>
+              </button>
+              
+              <button class="theme-card" data-theme="teal">
+                <div class="theme-preview">
+                  <div class="theme-color theme-color-primary"></div>
+                  <div class="theme-color theme-color-secondary"></div>
+                  <div class="theme-color theme-color-tertiary"></div>
+                </div>
+                <div class="theme-name">Teal</div>
+                <i class="material-icons check-icon">check_circle</i>
+              </button>
+              
+              <button class="theme-card" data-theme="pink">
+                <div class="theme-preview">
+                  <div class="theme-color theme-color-primary"></div>
+                  <div class="theme-color theme-color-secondary"></div>
+                  <div class="theme-color theme-color-tertiary"></div>
+                </div>
+                <div class="theme-name">Pink</div>
+                <i class="material-icons check-icon">check_circle</i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

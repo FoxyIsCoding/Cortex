@@ -1,4 +1,4 @@
-
+// random ahh script that runns on start of the browser after installed :3
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.get({ enabled: true }, (data) => {
@@ -7,5 +7,6 @@ chrome.runtime.onInstalled.addListener(() => {
     }
   });
   
-  console.log("Cortex extension installed!");
+  const style = 'background-color: darkblue; color: white;'
+  console.log("%c Cortex installed :P", style);
 });

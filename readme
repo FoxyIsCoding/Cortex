@@ -1,0 +1,72 @@
+# Cortex :3
+
+A simple yet capable extension that allows you to get rid of any bloat on most popular sites like YouTube, YT music, Twitter (X), Reddit and much more in future
+
+Its main goal is to remove uneeded and distracting elements, so you can focus on your work instead of being shoved 20 ads on reddit and AI brainrot shorts on Youtube.
+
+The extension has a nice material UI inspired design and is easy to use. The extension has already preactivated all the removals for the elements so you can use it straight away.. (I will implement a setting menu for turning specific stuff later on but rn im too busy..)
+
+The site blocks a daam lot of annoying and distracting stuff.. Heres a so what list of most of them:
+
+YouTube:
+- shorts, ads (feed), Recommendations, Youtube Bloat
+Reddit: 
+- Ads, Ad tools, Resources (the stuff like random ahh tools/links from the sidebar), Reddit games
+Twitter (X):
+- Who to follow, trending, Grok, Ads
+Instagram:
+- Reels, Suggestions, Ads
+Facebook:
+- Stories, Marketplace, Reels, ads, suggestions
+Linkedin:
+- Ads, news, Premium upsells
+Twitch:
+- Recomendations
+Tiktok:
+- For you, Explore, Suggested
+Threads: 
+- Explore, Suggested
+Pinterest:
+- Ads, Related Pins
+Github:
+- Trending
+Discord:
+- Shop, Discovery
+Quora:
+- Promoted Content
+
+---
+
+yeeyy so ye thats like all i have for now.. Each site has smaller removals too but thats not as important to mention here.
+
+The app also has a dev mode that allows you to pin point and remove said elements and export it so you can add it to the extension yourself (or remove it)
+
+#### Content editing :3
+To edit what elements get blocked you have to go to ``content.js`` and on top you have ``BLOCK_RULES``. Edit it to remove or add new elements for the site and its subdomains
+
+tho anyways this is how it should look:
+
+```{
+    site: "threads.net",
+    elements: [
+      "a[href='/explore/']",
+      "div:has(> svg[aria-label='Explore'])"
+    ]
+  }
+```
+
+or just simple element without any details:
+
+```
+  {
+    site: "youtube.com",
+    elements: [
+      "ytd-shorts-shelf-renderer",
+      "ytd-promoted-sparkles-web-renderer"
+    ]
+  }
+```
+
+---
+
+um ye welp that arbout it ig.. Hope you like this project. 
