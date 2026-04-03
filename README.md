@@ -1,3 +1,6 @@
+> Instalation:
+> download the extension to your downloads folder, then dont open it but go to the extensions page ( chrome://extensions/ on chrome ) and drag&drop the extension there.. If this wont work try enabling devoloper mode and then drag&dropping
+
 # Cortex :3
 
 A simple yet capable extension that allows you to get rid of any bloat on most popular sites like YouTube, YT music, Twitter (X), Reddit and much more in future
